@@ -30,10 +30,11 @@ export default function Home() {
   useEffect(() => {
     const getStats = async () => {
       try {
+        //trong video sẽ có hướng dẫn giải quyết cái token này, hiện tại ông chịu khó thêm tay vào như cái này, để xem những chỗ nào thêm đc thì tôi thêm
         const res = await axios.get("/users/stats", {
           headers: {
             token:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzlkODJmYWU0ZTJkMGMwNTYzOTY1NyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0ODA5Njk4OCwiZXhwIjoxNjQ4NTI4OTg4fQ.pZsB-IIBWtcTYT3iNC8dv_NirdrjcL0B6vP3wh9dsOk",
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzlkODJmYWU0ZTJkMGMwNTYzOTY1NyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0ODExOTY0MCwiZXhwIjoxNjQ4NTUxNjQwfQ.czu_QcrLeBw1hfsGJk4V_LoURjZWzq_zm05zMgmLDWQ",
           },
         });
         const statsList = res.data.sort(function (a, b) {
