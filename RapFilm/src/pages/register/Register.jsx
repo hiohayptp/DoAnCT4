@@ -2,7 +2,7 @@ import axios from "axios";
 import { useRef } from "react";
 import { useState } from "react";
 import "./register.scss";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Register() {
   const [email, setEmail] = useState("");
@@ -26,9 +26,11 @@ export default function Register() {
       navigate('/login');
       console.log(email, password);
     } catch (error) {
-
     }
   };
+  const handleSignIn = () => {
+    navigate('/login')
+  }
   return (
     <div className="register">
       <div className="top">
@@ -38,12 +40,11 @@ export default function Register() {
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
             alt=""
           />
-          <Link to="/login" className="link">
-            <button type="submit" className="loginButton">Sign In</button>
-          </Link>
+          <button className="loginButton" onClick={handleSignIn}>Sign In</button>
         </div>
       </div>
       <div className="container">
+        <button className="loginButton" onClick={handleSignIn}>Sign In</button>
         <h1>Unlimited movies, TV shows, and more.</h1>
         <h2>Watch anywhere. Cancel anytime.</h2>
         <p>
