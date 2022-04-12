@@ -2,7 +2,7 @@ import axios from "axios";
 import { useRef } from "react";
 import { useState } from "react";
 import "./register.scss";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Register() {
   const [email, setEmail] = useState("");
@@ -22,11 +22,11 @@ export default function Register() {
     setPassword(passwordRef.current.value);
     setUsername(usernameRef.current.value);
     try {
-      await axios.post("auth/register", { email, username, password});
+      await axios.post("auth/register", { email, username, password });
       navigate('/login');
       console.log(email, password);
     } catch (error) {
-      
+
     }
   };
   return (
@@ -38,7 +38,9 @@ export default function Register() {
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
             alt=""
           />
-          <button className="loginButton">Sign In</button>
+          <Link to="/login" className="link">
+            <button type="submit" className="loginButton">Sign In</button>
+          </Link>
         </div>
       </div>
       <div className="container">
@@ -56,7 +58,7 @@ export default function Register() {
           </div>
         ) : (
           <form className="input">
-             <input type="username" placeholder="username" ref={usernameRef} />
+            <input type="username" placeholder="username" ref={usernameRef} />
             <input type="password" placeholder="password" ref={passwordRef} />
             <button className="registerButton" onClick={handleFinish}>
               Start

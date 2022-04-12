@@ -24,7 +24,7 @@ export class VBrowserModal extends React.Component<{
   closeModal: Function;
   startVBrowser: Function;
   isSubscriber: boolean;
-  subscribeButton: JSX.Element;
+  // subscribeButton: JSX.Element;
   user?: firebase.User;
   beta?: boolean;
 }> {
@@ -163,13 +163,13 @@ export class VBrowserModal extends React.Component<{
                         <SignInButton fluid user={this.props.user} />
                       )}
                     </Table.Cell>
-                    <Table.Cell>
+                    {/* <Table.Cell>
                       {this.props.isSubscriber ? (
                         <LaunchButton large />
                       ) : (
                         this.props.subscribeButton
                       )}
-                    </Table.Cell>
+                    </Table.Cell> */}
                   </Table.Row>
                 </Table.Body>
               </Table>

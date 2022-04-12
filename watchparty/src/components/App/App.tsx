@@ -1392,13 +1392,13 @@ export default class App extends React.Component<AppProps, AppState> {
         isPauseDisabled={this.isPauseDisabled()}
       />
     );
-    const subscribeButton = (
-      <SubscribeButton
-        user={this.props.user}
-        isSubscriber={this.props.isSubscriber}
-        isCustomer={this.props.isCustomer}
-      />
-    );
+    // const subscribeButton = (
+    //   <SubscribeButton
+    //     user={this.props.user}
+    //     isSubscriber={this.props.isSubscriber}
+    //     isCustomer={this.props.isCustomer}
+    //   />
+    // );
     const displayRightContent =
       this.state.showRightBar || this.state.fullScreen;
     const rightBar = (
@@ -1568,7 +1568,7 @@ export default class App extends React.Component<AppProps, AppState> {
         {this.state.isVBrowserModalOpen && (
           <VBrowserModal
             isSubscriber={this.props.isSubscriber}
-            subscribeButton={subscribeButton}
+            // subscribeButton={subscribeButton}
             closeModal={() => this.setState({ isVBrowserModalOpen: false })}
             startVBrowser={this.startVBrowser}
             user={this.props.user}
@@ -1634,7 +1634,7 @@ export default class App extends React.Component<AppProps, AppState> {
         <TopBar
           user={this.props.user}
           isCustomer={this.props.isCustomer}
-          isSubscriber={this.props.isSubscriber}
+          // isSubscriber={this.props.isSubscriber}
           roomTitle={this.state.roomTitle}
           roomDescription={this.state.roomDescription}
           roomTitleColor={this.state.roomTitleColor}
@@ -1716,7 +1716,7 @@ export default class App extends React.Component<AppProps, AppState> {
                               }
                             />
                           )}
-                        {!this.screenShareStream &&
+                        {/* {!this.screenShareStream &&
                           !sharer &&
                           !this.isVBrowser() && (
                             <Popup
@@ -1740,7 +1740,7 @@ export default class App extends React.Component<AppProps, AppState> {
                                 </Button>
                               }
                             />
-                          )}
+                          )} */}
                         {this.isVBrowser() && (
                           <Popup
                             content="Choose the person controlling the VBrowser"

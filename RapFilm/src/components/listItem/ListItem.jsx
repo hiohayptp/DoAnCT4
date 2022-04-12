@@ -32,7 +32,8 @@ export default function ListItem({ index, item }) {
   }, [item])
 
   return (
-    <Link to="/watch" state={{ movie }}>
+    // <Link to="/watch" state={{ movie }}>
+    <a href="http://localhost:3000">
       <div
         className="listItem"
         style={{ left: isHovered && index * 225 - 50 + index * 2.5 }}
@@ -61,6 +62,6 @@ export default function ListItem({ index, item }) {
           </>
         )}
       </div>
-    </Link>
+    </a>
   );
 }

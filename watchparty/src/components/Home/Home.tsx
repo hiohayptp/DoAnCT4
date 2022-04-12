@@ -19,13 +19,13 @@ export const Home = ({ user }: { user: firebase.User | undefined }) => {
           }
           image={'/screenshot4.png'}
         />
-        <Divider horizontal>
+        {/* <Divider horizontal>
           <Header inverted as="h4">
             <Icon name="film" />
             Multiple ways to watch
           </Header>
-        </Divider>
-        <div className={styles.featureSection}>
+        </Divider> */}
+        {/* <div className={styles.featureSection}>
           <Feature
             icon="slideshare"
             title={`Screensharing`}
@@ -136,7 +136,7 @@ export const Home = ({ user }: { user: firebase.User | undefined }) => {
           <div style={{ width: '160px' }}>
             <NewRoomButton user={user} />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
@@ -186,8 +186,8 @@ const Hero = ({
     <div className={`${styles.hero} ${color === 'green' ? styles.green : ''}`}>
       <div className={styles.heroInner}>
         <div style={{ padding: '30px', flex: '1 1 0' }}>
-          <div className={styles.heroText}>{heroText}</div>
-          <div className={styles.subText}>{subText}</div>
+          {/* <div className={styles.heroText}>{heroText}</div>
+          <div className={styles.subText}>{subText}</div> */}
           {action}
         </div>
         <div
@@ -195,11 +195,11 @@ const Hero = ({
             flex: '1 1 0',
           }}
         >
-          <img
+          {/* <img
             alt="hero"
             style={{ width: '100%', borderRadius: '10px' }}
             src={image}
-          />
+          /> */}
         </div>
       </div>
     </div>

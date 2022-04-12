@@ -254,20 +254,20 @@ export class TopBar extends React.Component<{
   hideNewRoom?: boolean;
   hideSignin?: boolean;
   hideMyRooms?: boolean;
-  isSubscriber: boolean;
+  // isSubscriber: boolean;
   isCustomer: boolean;
   roomTitle?: string;
   roomDescription?: string;
   roomTitleColor?: string;
 }> {
   render() {
-    const subscribeButton = (
-      <SubscribeButton
-        user={this.props.user}
-        isSubscriber={this.props.isSubscriber ?? false}
-        isCustomer={this.props.isCustomer ?? false}
-      />
-    );
+    // const subscribeButton = (
+    //   <SubscribeButton
+    //     user={this.props.user}
+    //     isSubscriber={this.props.isSubscriber ?? false}
+    //     isCustomer={this.props.isCustomer ?? false}
+    //   />
+    // );
     return (
       <React.Fragment>
         <div
@@ -314,7 +314,7 @@ export class TopBar extends React.Component<{
               />
             </div>
           </a>
-          {this.props.roomTitle || this.props.roomDescription ? (
+          {/* {this.props.roomTitle || this.props.roomDescription ? (
             <div
               style={{
                 display: 'flex',
@@ -373,8 +373,8 @@ export class TopBar extends React.Component<{
                 </div>
               </a>
             </React.Fragment>
-          )}
-          <div
+          )} */}
+          {/* <div
             style={{
               display: 'flex',
               marginLeft: '10px',
@@ -399,7 +399,7 @@ export class TopBar extends React.Component<{
             >
               <Icon name="github" size="big" link />
             </a>
-          </div>
+          </div> */}
           <div
             className="mobileStack"
             style={{
@@ -414,8 +414,8 @@ export class TopBar extends React.Component<{
             {!this.props.hideMyRooms && this.props.user && (
               <ListRoomsButton user={this.props.user} />
             )}
-            {subscribeButton}
-            {!this.props.hideSignin && <SignInButton user={this.props.user} />}
+            {/* {subscribeButton} */}
+            {/* {!this.props.hideSignin && <SignInButton user={this.props.user} />} */}
           </div>
         </div>
       </React.Fragment>

@@ -10,7 +10,7 @@ import Register from "./pages/register/Register";
 import Watch from "./pages/watch/Watch";
 import Login from "./pages/login/Login";
 import { useContext } from "react";
-import{ AuthContext} from "./authContext/AuthContext"
+import { AuthContext } from "./authContext/AuthContext"
 
 const App = () => {
   const { user } = useContext(AuthContext);
@@ -26,6 +26,10 @@ const App = () => {
             <Route path="/movies" element={<Home type={"movie"} />} />
             <Route path="/series" element={<Home type={"series"} />} />
             <Route path="/watch" element={<Watch />} />
+            <Route path="/watchparty" element={() => {
+              window.location.replace('http://localhost:3000"');
+              return null;
+            }} />
           </>
         }
       </Routes>

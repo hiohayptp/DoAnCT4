@@ -81,14 +81,7 @@ class WatchParty extends React.Component {
               }
               return (
                 <React.Fragment>
-                  <TopBar
-                    user={this.state.user}
-                    isSubscriber={this.state.isSubscriber}
-                    isCustomer={this.state.isCustomer}
-                    hideNewRoom
-                  />
                   <Home user={this.state.user} />
-                  <Footer />
                 </React.Fragment>
               );
             }}
@@ -110,42 +103,18 @@ class WatchParty extends React.Component {
             }}
           />
           <Route path="/terms">
-            <TopBar
-              user={this.state.user}
-              isSubscriber={this.state.isSubscriber}
-              isCustomer={this.state.isCustomer}
-            />
             <Terms />
-            <Footer />
           </Route>
           <Route path="/privacy">
-            <TopBar
-              user={this.state.user}
-              isSubscriber={this.state.isSubscriber}
-              isCustomer={this.state.isCustomer}
-            />
             <Privacy />
-            <Footer />
           </Route>
           <Route path="/faq">
-            <TopBar
-              user={this.state.user}
-              isSubscriber={this.state.isSubscriber}
-              isCustomer={this.state.isCustomer}
-            />
             <FAQ />
-            <Footer />
           </Route>
           <Route path="/debug">
-            <TopBar
-              user={this.state.user}
-              isSubscriber={this.state.isSubscriber}
-              isCustomer={this.state.isCustomer}
-            />
             <Suspense fallback={null}>
               <Debug />
             </Suspense>
-            <Footer />
           </Route>
         </BrowserRouter>
       </React.StrictMode>
